@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <script src="Scripts.js"></script>
+    <script src="navbar.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <button class="dark-mode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    
+    <div class="container">
+        <div class="Header">The Knowledge Hub</div>
+        
+        <div class="content-wrapper">
+            <div class="NavBar">
+                <h3>Navigation</h3>
+                <div id="nav-placeholder"></div>
+            </div>
+            
+            <div class="Main">
+                <h1>Offical Documents</h1>
+                <p>Main content goes here.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
