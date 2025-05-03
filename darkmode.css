@@ -101,6 +101,24 @@ body.dark-mode .dark-mode-btn:hover {
     }
 }
 
+/* Icon styling for dark mode */
+body.dark-mode .NavBar a i {
+    color: #64b5f6;
+}
+
+body.dark-mode .NavBar a:hover i {
+    color: #90caf9;
+}
+
+body.dark-mode .NavBar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+body.dark-mode .dark-mode-btn:hover {
+    background-color: #9d65fa;
+}
+
 
 @media screen and (max-width: 768px) {
 

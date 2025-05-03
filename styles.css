@@ -67,6 +67,20 @@ body {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Icon styling */
+.NavBar a i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #007BFF;
+    transition: color 0.2s;
+}
+
+.NavBar a:hover i {
+    color: #0056b3;
+}
+
 /* Main content area */
 .Main {
     background-color: #ecf0f1;
