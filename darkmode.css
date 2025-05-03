@@ -115,11 +115,6 @@ body.dark-mode .NavBar a:hover {
 }
 
 
-body.dark-mode .dark-mode-btn:hover {
-    background-color: #9d65fa;
-}
-
-
 @media screen and (max-width: 768px) {
 
     .dark-mode-btn {
