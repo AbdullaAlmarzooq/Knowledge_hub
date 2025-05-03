@@ -1,0 +1,158 @@
+        /* Card container styles */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        /* Card styles */
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            padding: 28px;
+            width: 280px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .dark-mode .card {
+            background-color: #2d2d2d;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Card icon */
+        .card-icon {
+            background-color: #f0f7ff;
+            color: #1a73e8;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .card-icon.open {
+            background-color: #e6f7ed;
+            color: #34a853;
+        }
+        
+        .card-icon.close {
+            background-color: #fce8e6;
+            color: #ea4335;
+        }
+        
+        .dark-mode .card-icon {
+            background-color: #2b3a4b;
+        }
+        
+        .dark-mode .card-icon.open {
+            background-color: #1f3d2e;
+            color: #4eca75;
+        }
+        
+        .dark-mode .card-icon.close {
+            background-color: #3d2929;
+            color: #ff6b6b;
+        }
+        
+        /* Card title */
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1f2937;
+        }
+        
+        .dark-mode .card-title {
+            color: #e5e7eb;
+        }
+        
+        /* Card description */
+        .card-description {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        
+        .dark-mode .card-description {
+            color: #9ca3af;
+        }
+        
+        /* Card button */
+        .card-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #1a73e8;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .card-button:hover {
+            background-color: #0d62cf;
+        }
+        
+        .card-button.open {
+            background-color: #34a853;
+        }
+        
+        .card-button.open:hover {
+            background-color: #2d9249;
+        }
+        
+        .card-button.close {
+            background-color: #ea4335;
+        }
+        
+        .card-button.close:hover {
+            background-color: #d33426;
+        }
+        
+        /* Card decoration */
+        .card-decoration {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(26, 115, 232, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .dark-mode .card-decoration {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+        
+        .card-decoration.open {
+            background-color: rgba(52, 168, 83, 0.05);
+        }
+        
+        .dark-mode .card-decoration.open {
+            background-color: rgba(52, 168, 83, 0.05);
+        }
+        
+        .card-decoration.close {
+            background-color: rgba(234, 67, 53, 0.05);
+        }
+        
+        .dark-mode .card-decoration.close {
+            background-color: rgba(234, 67, 53, 0.05);
+        }
