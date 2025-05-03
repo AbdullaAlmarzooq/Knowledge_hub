@@ -78,26 +78,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Dark mode toggle button */
-.dark-mode-btn {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    z-index: 100;
-    transition: background-color 0.2s;
-}
-
-.dark-mode-btn:hover {
-    background-color: #0056b3;
-}
-
 /* Responsive design */
 @media screen and (max-width: 768px) {
     .content-wrapper {
@@ -127,4 +107,5 @@ body {
     .Main {
         padding: 1rem;
     }
+
 }

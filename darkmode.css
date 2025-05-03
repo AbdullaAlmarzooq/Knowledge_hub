@@ -1,21 +1,59 @@
 /* Dark mode button styles */
 .dark-mode-btn {
     position: fixed;
-    top: 10px;
+    top: 0px;
+    left:80%;
     right: 10px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+    padding: 1em 1.5em;
+    background: transparent;
+    color: #ffedd3;
     border: none;
-    border-radius: 5px;
+    position: relative;
+    transition: 0.5s ease;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 17px;
     z-index: 100;
+    overflow: hidden;
 }
 
 .dark-mode-btn:hover {
-    background-color: #0056b3;
+  color: #1e1e2b;
+  transition-delay: 0.5s;
 }
+
+.dark-mode-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffc506;
+    transition: 0.5s ease;
+  }
+
+.dark-mode-btn:hover::before {
+  width: 100%;
+}
+
+.dark-mode-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.dark-mode-btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: rgb(0, 0, 0);
+}
+
 
 /* Dark mode styles */
 html.dark-mode,
@@ -48,17 +86,35 @@ body.dark-mode .NavBar a:hover {
 }
 
 body.dark-mode .dark-mode-btn {
-    background-color: #bb86fc;
-    color: #121212;
+    color: #ffffff;
 }
 
 body.dark-mode .dark-mode-btn:hover {
-    background-color: #9d65fa;
+    color: #ffffff;
+    transition-delay: 0.5s;
 }
 
 @media (prefers-color-scheme: dark) {
     .dark-mode-btn {
-        background-color: #bb86fc;
-        color: #121212;
+
+        color: #000000;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .dark-mode-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 0.75em 1em;
+        font-size: 14px;
+        z-index: 1000; /* Increased z-index to ensure visibility */
+    }
+    
+    /* Adjust content to not be hidden by the fixed button */
+    .content {
+        margin-top: 70px;
     }
 }
