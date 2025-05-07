@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: ArAnial, sans-serif;
     line-height: 1.6;
 }
 
@@ -139,4 +139,19 @@ body {
         padding: 1rem;
     }
 
+}
+
+.user-greeting {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .user-greeting {
+    color: #e0e0e0;
 }

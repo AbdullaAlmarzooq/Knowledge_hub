@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Knowledge Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="name.js"></script>
+    <script src="Scripts.js"></script>
+    <script src="navbar.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+</head>
+<body>
+    <button class="dark-mode-btn" onclick="toggleDarkMode()"></button>
+    <body>
+        <div class="container">
+            <div class="Header">
+                <h1>Welcome</h1>
+                <button class="dark-mode-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+            </div>
+            
+            <div class="content-wrapper">
+                <main class="Main">
+                    <div class="form-container">
+                        <h2>Let's Get Started</h2>
+                        <p class="form-subtitle">Please enter your information to continue</p>
+                        
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" placeholder="Enter your first name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Enter your last name">
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="btn btn-save" onclick="saveName()">Save</button>
+                            <button class="btn btn-skip" onclick="skipToMain()">Skip</button>
+                        </div>
+                        
+                        <div id="result" class="result-message"></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+<div id="result"></div>
+</body>
+</html>

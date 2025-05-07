@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="darkmode.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="name.js"></script>
     <script src="Scripts.js"></script>
     <script src="navbar.js" defer></script>
     <script>
+        
         document.addEventListener('DOMContentLoaded', function() {
             if (localStorage.getItem('darkMode') === 'enabled') {
                 document.documentElement.classList.add('dark-mode');
                 document.body.classList.add('dark-mode');
             }
+                    // Check if user name exists and display personalized greeting
+                    const userName = localStorage.getItem('userName');
+            const greetingElement = document.getElementById('user-greeting');
+            
+            if (userName && userName.trim() !== '') {
+                greetingElement.textContent = 'Hello ' + userName + '!';
+            } else {
+                greetingElement.textContent = 'Hello Guest!';
+            }
         });
+
     </script>
 </head>
 <body>
@@ -31,6 +43,9 @@
             </div>
             
             <div class="Main">
+
+                <div class="user-greeting" id="user-greeting">Hello Guest!</div>
+
                 <h1>Main page</h1>
                 <p>Welcome to the Knowledge Hub, your central resource for navigating company information and services. Here, you'll find quick access to essential official documents, streamlined pathways to internal services, a curated collection of helpful external links, and a comprehensive directory of important contact numbers. Our goal is to empower you with the information you need, right at your fingertips, making your daily tasks more efficient and your access to support seamless. Explore the sections below to discover the wealth of knowledge available to you.</p>
             </div>

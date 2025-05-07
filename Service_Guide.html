@@ -15,6 +15,15 @@
                 document.documentElement.classList.add('dark-mode');
                 document.body.classList.add('dark-mode');
             }
+                    // Check if user name exists and display personalized greeting
+                    const userName = localStorage.getItem('userName');
+            const greetingElement = document.getElementById('user-greeting');
+            
+            if (userName && userName.trim() !== '') {
+                greetingElement.textContent = 'Hello ' + userName + '!';
+            } else {
+                greetingElement.textContent = 'Hello Guest!';
+            }
         });
     </script>
 </head>
