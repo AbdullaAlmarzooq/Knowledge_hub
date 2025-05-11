@@ -1,3 +1,11 @@
+@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Dark mode button styles */
 .dark-mode-btn {
     position: fixed;
